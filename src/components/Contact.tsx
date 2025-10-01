@@ -1,8 +1,8 @@
 import React from "react";
-import { useForm, ValidationError } from "@formspree/react";
+import { useForm } from "@formspree/react";
 
 const Contact: React.FC = () => {
-  const [state, handleSubmit] = useForm("YOUR_FORM_ID"); // replace with your Formspree form ID
+  const [state, handleSubmit] = useForm("mwprbeak");
 
   if (state.succeeded) {
     return (
@@ -69,11 +69,6 @@ const Contact: React.FC = () => {
               placeholder="Email"
               name="email"
               required
-            />
-            <ValidationError
-              prefix="Email"
-              field="email"
-              errors={state.errors}
             />
 
             <input
