@@ -1,4 +1,5 @@
 import React from "react";
+import SplitButton from "./SplitButton";
 
 const Hero: React.FC = () => {
   return (
@@ -21,10 +22,10 @@ const Hero: React.FC = () => {
           <div className="absolute -left-6 -top-4 text-8xl md:text-9xl font-display text-brand leading-none">
             "
           </div>
-          <div className="ml-12 md:ml-16">
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl uppercase leading-tight text-ink font-black tracking-tight">
               LET'S BRING TOGETHER WHAT BELONGS TOGETHER.
             </h2>
+          <div className="ml-12 md:ml-16">
             <p className="mt-8 text-sm md:text-base leading-7 text-ink/80 max-w-lg">
               For a strong economic centre, Germany needs to focus on innovative
               solutions and technologies. Start-ups and innovation investments
@@ -48,12 +49,13 @@ const Hero: React.FC = () => {
             numerous high-potential investment opportunities.
           </p>
           <div className="flex justify-end pt-4">
-            <a
-              href="#about"
-              className="btn-primary text-xs font-semibold tracking-wider px-6 py-3"
-            >
-              LEARN MORE →
-            </a>
+            <SplitButton
+              label="LEARN MORE"
+              bgColor="bg-[#f3ff4d]"
+              hoverBgColor="hover:bg-black"
+              textColor="text-black"
+              hoverTextColor="hover:text-[#f3ff4d]"
+            />
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import SplitButton from "./SplitButton";
 
 const services = [
   {
@@ -30,9 +31,9 @@ const Services: React.FC = () => (
       </h2>
 
       {/* Grid */}
-      <div className="grid md:grid-cols-3 divide-x-2 divide-black">
+      <div className="grid md:grid-cols-3 divide-x-2 divide-black border-l-2 border-black">
         {services.map((service, idx) => (
-          <div key={idx} className="px-8">
+          <div key={idx} className="px-8 flex flex-col h-full">
             {/* Icon */}
             <div className="text-4xl mb-6">{service.icon}</div>
 
@@ -42,14 +43,18 @@ const Services: React.FC = () => (
             </h3>
 
             {/* Description */}
-            <p className="text-sm md:text-base leading-7 text-ink/80 mb-8">
+            <p className="text-sm md:text-base leading-7 text-ink/80 mb-8 flex-grow">
               {service.description}
             </p>
 
             {/* Button */}
-            <button className="inline-flex items-center gap-2 bg-[#f3ff4d] px-4 py-2 text-xs font-black uppercase tracking-wide border border-black hover:bg-black hover:text-[#f3ff4d] transition leading-none">
-              MORE INFO <span className="text-base">→</span>
-            </button>
+            <SplitButton
+              label="More Info"
+              bgColor="bg-[#f3ff4d]"
+              hoverBgColor="hover:bg-black"
+              textColor="text-black"
+              hoverTextColor="hover:text-[#f3ff4d]"
+            />
           </div>
         ))}
       </div>
